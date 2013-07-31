@@ -64,7 +64,7 @@ namespace Code
             //OHAI! Put your URL here. Has to be a file.
             
              
-            var mattsHot = "http://4channel.biz/datshellcode.txt";
+            var mattsHot = "$URL";
 
 
 
