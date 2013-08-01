@@ -64,7 +64,7 @@ namespace Code
             //OHAI! Put your URL here. Has to be a file.
             
              
-            var mattsHot = "$URL";
+            var mattsHot = "ThisIsYourURL";
 
 
 
