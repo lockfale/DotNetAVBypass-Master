@@ -23,4 +23,7 @@ This solution was made with Visual Studio 2010, but should compile on anything a
 ### Original Blog Post
 http://www.mattandreko.com/2012/02/using-net-to-bypass-av.html
 
+### Mad Props to
+Bill Sempf (@Sempf), for all his love and care and .NET glamour. And for writing all of this so we could steal it from him.
+
 
