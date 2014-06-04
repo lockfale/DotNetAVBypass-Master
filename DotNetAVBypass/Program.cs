@@ -64,7 +64,7 @@ namespace Code
             //OHAI! Put your URL here. Has to be a file.
             
              
-            var mattsHot = "ThisIsYourURL";
+            var mattsHot = "thisisyoururl";
 
 
 
@@ -74,6 +74,11 @@ namespace Code
             //Download for great justice
             WebRequest webRequest = WebRequest.Create(mattsHot);
             webRequest.Method = WebRequestMethods.Http.Get;
+
+            //Attempt to bypass local proxy
+            //Comment this line out if it makes your run puke.
+            webRequest.Proxy = new WebProxy();
+
             WebResponse webResponse = webRequest.GetResponse();
             Stream webResponseStream = webResponse.GetResponseStream();
             StreamReader reader = new StreamReader(webResponseStream);
